@@ -11,7 +11,7 @@ RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(isAudioPlaying:(RCTResponseSenderBlock)callback)
 {
-    BOOL isOtherAudioPlaying = [[AVAudioSession sharedInstance] secondaryAudioShouldBeSilencedHint];
+    BOOL isOtherAudioPlaying = [[AVAudioSession sharedInstance] isOtherAudioPlaying];
     callback(@[[NSNumber numberWithBool:isOtherAudioPlaying]]);
 }
 

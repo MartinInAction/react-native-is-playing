@@ -2,10 +2,11 @@ import {NativeModules} from 'react-native'
 const {RNIsPlaying} = NativeModules
 
 let isPlayingAudio = () => {
- RNIsPlaying.isAudioPlaying((musicState) => {
-      if (musicState) return true
-      else return false
+  return new Promise((resolve, reject) => {
+    RNIsPlaying.isAudioPlaying((musicState) => {
+      resolve(musicState)
     })
+  })
 }
 
 export default isPlayingAudio

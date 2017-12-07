@@ -1,6 +1,11 @@
+import {NativeModules} from 'react-native'
+const {RNIsPlaying} = NativeModules
 
-import { NativeModules } from 'react-native';
+let isPlayingAudio = () => {
+ RNIsPlaying.isAudioPlaying((musicState) => {
+      if (musicState) return true
+      else return false
+    })
+}
 
-const { RNIsPlaying } = NativeModules;
-
-export default RNIsPlaying;
+export default isPlayingAudio

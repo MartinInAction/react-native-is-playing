@@ -1,6 +1,6 @@
 
 #import "RNIsPlaying.h"
-
+#import <AVFoundation/AVFoundation.h>
 @implementation RNIsPlaying
 
 - (dispatch_queue_t)methodQueue
@@ -9,16 +9,12 @@
 }
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(isAudioPlaying:(BOOL *))
+RCT_EXPORT_METHOD(isAudioPlaying:(RCTResponseSenderBlock)callback)
 {
     BOOL isOtherAudioPlaying = [[AVAudioSession sharedInstance] isOtherAudioPlaying];
-    if (isOtherAudioPlaying) {
-        return true
-    }
-    else {
-        return false
-    }
+    callback(@[[NSNumber numberWithBool:isOtherAudioPlaying]]);
 }
+
 
 
 @end

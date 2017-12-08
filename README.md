@@ -50,7 +50,7 @@ Only for ios, android is comming soon!
 
 ## Usage
 ```javascript
-import RNIsPlaying from 'react-native-is-playing';
+import isPlayingAudio from 'react-native-is-playing'
 isPlayingAudio().then((res) => {
       if (res) console.warn('💃YEH! MUSIC IS OOOOON! 🤘')
       else console.warn('🔇NO MUSIC HERE...🔇')

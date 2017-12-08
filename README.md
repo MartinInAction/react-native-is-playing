@@ -1,6 +1,9 @@
 
 # react-native-is-playing
 
+a simple module to see if music is playing on your device! 
+simulator is no go!
+
 Only for ios, android is comming soon!
 
 ## Getting started
@@ -48,8 +51,10 @@ Only for ios, android is comming soon!
 ## Usage
 ```javascript
 import RNIsPlaying from 'react-native-is-playing';
-
-// TODO: What to do with the module?
+isPlayingAudio().then((res) => {
+      if (res) console.warn('💃YEH! MUSIC IS OOOOON! 🤘')
+      else console.warn('🔇NO MUSIC HERE...🔇')
+    })
 RNIsPlaying;
 ```
   

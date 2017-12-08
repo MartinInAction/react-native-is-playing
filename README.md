@@ -55,6 +55,5 @@ isPlayingAudio().then((res) => {
       if (res) console.warn('💃YEH! MUSIC IS OOOOON! 🤘')
       else console.warn('🔇NO MUSIC HERE...🔇')
     })
-RNIsPlaying;
 ```
   

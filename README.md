@@ -1,9 +1,11 @@
 
 # react-native-is-playing
 
+Only for ios, android is comming soon!
+
 ## Getting started
 
-`$ npm install react-native-is-playing --save`
+`$ yarn add react-native-is-playing`
 
 ### Mostly automatic installation
 

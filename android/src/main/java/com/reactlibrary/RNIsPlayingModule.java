@@ -5,6 +5,11 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.Promise;
+
+import android.media.AudioManager;
+
+import android.util.Log;
 
 public class RNIsPlayingModule extends ReactContextBaseJavaModule {
 
@@ -13,6 +18,13 @@ public class RNIsPlayingModule extends ReactContextBaseJavaModule {
   public RNIsPlayingModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
+  }
+
+  @ReactMethod
+  public void isAudioPlaying(Callback callback) {
+    AudioManager manager = (AudioManager) reactContext.getSystemService(reactContext.AUDIO_SERVICE);
+    boolean res = manager.isMusicActive();
+    callback.invoke(res);
   }
 
   @Override

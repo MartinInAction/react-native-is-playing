@@ -1,22 +1,23 @@
-import {NativeModules} from 'react-native'
+import {NativeModules, Platform} from 'react-native'
 const {RNIsPlaying} = NativeModules
 
 let isPlayingAudio = () => {
-  return new Promise((resolve, reject) => {
-    RNIsPlaying.isAudioPlaying((error, musicState) => {
-      if (error) reject(error)
-      resolve(musicState)
+  if (Platform.OS === 'ios') {
+    return new Promise((resolve, reject) => {
+      RNIsPlaying.isAudioPlaying((error, musicState) => {
+        if (error) reject(error)
+        resolve(musicState)
+      })
     })
-  })
-}
+  }
 
-export let whatSong = () => {
   return new Promise((resolve, reject) => {
-    RNIsPlaying.whatSong((error, musicState) => {
+    RNIsPlaying.isAudioPlaying((musicState, error) => {
       if (error) reject(error)
       resolve(musicState)
     })
   })
+
 }
 
 export default isPlayingAudio

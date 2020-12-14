@@ -11,11 +11,11 @@ import android.media.AudioManager;
 
 import android.util.Log;
 
-public class isPlayingModule extends ReactContextBaseJavaModule {
+public class IsPlayingModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
 
-  public isPlayingModule(ReactApplicationContext reactContext) {
+  public IsPlayingModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
   }
@@ -29,6 +29,6 @@ public class isPlayingModule extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "isPlaying";
+    return "IsPlaying";
   }
 }

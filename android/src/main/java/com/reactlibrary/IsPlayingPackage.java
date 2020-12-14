@@ -13,7 +13,7 @@ import com.facebook.react.bridge.JavaScriptModule;
 public class IsPlayingPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new isPlayingModule(reactContext));
+      return Arrays.<NativeModule>asList(new IsPlayingModule(reactContext));
     }
 
     // Deprecated from RN 0.47

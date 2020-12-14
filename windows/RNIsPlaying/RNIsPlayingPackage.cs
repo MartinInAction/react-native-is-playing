@@ -4,7 +4,7 @@ using ReactNative.UIManager;
 using System;
 using System.Collections.Generic;
 
-namespace Is.Playing.RNIsPlaying
+namespace Is.Playing.isPlaying
 {
     /// <summary>
     /// Package defining core framework modules (e.g., <see cref="UIManagerModule"/>).
@@ -12,7 +12,7 @@ namespace Is.Playing.RNIsPlaying
     /// other framework parts (e.g., with the list of packages to load view
     /// managers from).
     /// </summary>
-    public class RNIsPlayingPackage : IReactPackage
+    public class isPlayingPackage : IReactPackage
     {
         /// <summary>
         /// Creates the list of native modules to register with the react
@@ -24,7 +24,7 @@ namespace Is.Playing.RNIsPlaying
         {
             return new List<INativeModule>
             {
-                new RNIsPlayingModule(),
+                new isPlayingModule(),
             };
         }
 

@@ -5,7 +5,7 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
-@interface RNIsPlaying : NSObject <RCTBridgeModule>
+@interface isPlaying : NSObject <RCTBridgeModule>
 
 @end
   

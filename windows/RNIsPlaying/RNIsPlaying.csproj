@@ -129,9 +129,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RNIsPlayingModule.cs" />
-    <Compile Include="RNIsPlayingPackage.cs" />
-    <EmbeddedResource Include="Properties\RNIsPlaying.rd.xml" />
+    <Compile Include="isPlayingModule.cs" />
+    <Compile Include="isPlayingPackage.cs" />
+    <EmbeddedResource Include="Properties\isPlaying.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(ReactWindowsRoot)\react-native-windows\ReactWindows\ReactNative\ReactNative.csproj">

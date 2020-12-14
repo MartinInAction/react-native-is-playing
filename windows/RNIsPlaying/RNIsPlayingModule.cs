@@ -4,17 +4,17 @@ using System.Collections.Generic;
 using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
 
-namespace Is.Playing.RNIsPlaying
+namespace Is.Playing.isPlaying
 {
     /// <summary>
     /// A module that allows JS to share data.
     /// </summary>
-    class RNIsPlayingModule : NativeModuleBase
+    class isPlayingModule : NativeModuleBase
     {
         /// <summary>
-        /// Instantiates the <see cref="RNIsPlayingModule"/>.
+        /// Instantiates the <see cref="isPlayingModule"/>.
         /// </summary>
-        internal RNIsPlayingModule()
+        internal isPlayingModule()
         {
 
         }
@@ -26,7 +26,7 @@ namespace Is.Playing.RNIsPlaying
         {
             get
             {
-                return "RNIsPlaying";
+                return "isPlaying";
             }
         }
     }

@@ -1,11 +1,11 @@
 
-#import "RNIsPlaying.h"
+#import "isPlaying.h"
 #import <AVFoundation/AVFoundation.h>
 // #import <MediaPlayer/MPMusicPlayerController.h>
 #import <MediaPlayer/MediaPlayer.h>
 
 
-@implementation RNIsPlaying
+@implementation isPlaying
 
 - (dispatch_queue_t)methodQueue
 {

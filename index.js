@@ -1,10 +1,10 @@
 import {NativeModules, Platform} from 'react-native'
-const {RNIsPlaying} = NativeModules
+const {isPlaying} = NativeModules
 
 let isPlayingAudio = () => {
   if (Platform.OS === 'ios') {
     return new Promise((resolve, reject) => {
-      RNIsPlaying.isAudioPlaying((error, musicState) => {
+      isPlaying.isAudioPlaying((error, musicState) => {
         if (error) reject(error)
         resolve(musicState)
       })
@@ -12,7 +12,7 @@ let isPlayingAudio = () => {
   }
 
   return new Promise((resolve, reject) => {
-    RNIsPlaying.isAudioPlaying((musicState, error) => {
+    isPlaying.isAudioPlaying((musicState, error) => {
       if (error) reject(error)
       resolve(musicState)
     })

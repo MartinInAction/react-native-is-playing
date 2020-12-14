@@ -1,7 +1,7 @@
 {
   "name": "react-native-is-playing",
   "version": "1.0.3",
-  "description": "",
+  "description": "package to check if music is playing",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
